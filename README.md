@@ -38,7 +38,7 @@ There will also be nav links to my Github, LinkedIn, instructions, and a restart
  There will be better images and animation rather than the images shown, this will be the skeleton of how the game works.
 
 
-<<<<<<< HEAD
+
  ## Architecture and Technologies
 
  This project will be implemented with the following technologies:
@@ -53,33 +53,31 @@ Over the weekend
 - [ ] Learn about animation and get sprites for animation
 
 Day 1 Start rendering enemy units and create towers
-=======
  ## Architecture and Technologies 
 
  This project will be implemented with the following technologies:
-* Vanilla JavaScript for the overall structure and game logic. 
-* HTML5 canvas for DOM manipulation and rendering. 
-* Webpack to bundle scripts 
+* Vanilla JavaScript for the overall structure and game logic.
+* HTML5 canvas for DOM manipulation and rendering.
+* Webpack to bundle scripts
 
-## Implementation Timeline 
+## Implementation Timeline
 
 Over the weekend
-- [ ] Create grid of the game with a background 
+- [ ] Create grid of the game with a background
 - [ ] Learn about animation and get sprites for animation
 
-Day 1 Start rendering enemy units and create towers 
->>>>>>> e2b694491d09cf6aee423b24c7710ddfe4379881
+Day 1 Start rendering enemy units and create towers
+
 - [ ] Learn about animation and be able to render enemy units
 - [ ] Start on collision between tower attacks and enemy units
 
 Day 2 Learn how to include audio and be able to create towers
-<<<<<<< HEAD
+
 - [ ] create audio and background music
 - [ ] Create sidebar menu for towers
-=======
-- [ ] create audio and background music 
-- [ ] Create sidebar menu for towers 
->>>>>>> e2b694491d09cf6aee423b24c7710ddfe4379881
+- [ ] create audio and background music
+- [ ] Create sidebar menu for towers
+
 
 Day 3 Create towers and set on location and have towers attack automatically
 - [ ] write logic for tower class with attacking every set interval
@@ -88,7 +86,3 @@ Day 3 Create towers and set on location and have towers attack automatically
 Day 4 Testing and completing unfinished tasks
 - [ ] Test the game and see if there are any bugs
 - [ ] Create Restart for the game
-<<<<<<< HEAD
-=======
-
->>>>>>> e2b694491d09cf6aee423b24c7710ddfe4379881
