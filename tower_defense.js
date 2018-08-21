@@ -14,27 +14,11 @@ unitImage1.src="./images/monster2Sprite.png";
 document.addEventListener("DOMContentLoaded", () => {
   const canvas = document.getElementById("game-canvas");
   const ctx = canvas.getContext("2d");
-
   const grid = new Grid(1100,500);
-  //grid.draw(ctx);
-
-
   const towerMenu=new TowerMenu();
-  //towerMenu.draw(ctx);
-
-  //
-  // const u = new Unit({image:unitImage1, context: ctx});
-  // unitImage1.onload = () => {
-  //   u.draw(ctx);
-  // }
-
- const game = new Game(grid,towerMenu,ctx);
-  //  game.start(ctx);
+  const game = new Game(grid,towerMenu,ctx);
   const gameview = new GameView(game,ctx);
- //gameview.start();
-
-
-
+  gameview.start();
 
   //gets the position at the grid that was picked
   canvas.addEventListener('click', function(event) {
@@ -45,7 +29,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
    const xEst =  Math.floor(x/100)*100;
    const yEst = Math.floor(y/100)*100
-   alert("x coord:" +xEst+ " y coord:" +  yEst);
+   //alert("x coord:" +xEst+ " y coord:" +  yEst);
 
 }, false);
 
