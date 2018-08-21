@@ -27,7 +27,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const tower2 = new Tower(50,250,towerImage2);
 
   const towerMenu=new TowerMenu([tower1,tower2]);
-  const game = new Game(grid,towerMenu,canvas);
+  const game = new Game(grid,towerMenu,canvas,ctx);
 
 
 
