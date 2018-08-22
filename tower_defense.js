@@ -23,8 +23,21 @@ document.addEventListener("DOMContentLoaded", () => {
   const ctx = canvas.getContext("2d");
   const grid = new Grid(1100,500);
 
-  const tower1 = new Tower(50,50,towerImage1);
-  const tower2 = new Tower(50,250,towerImage2);
+  let tower1Constructor = {
+    x:50,
+    y:50,
+    img: towerImage1
+  };
+
+  let tower2Constructor = {
+    x:50,
+    y:250,
+    img:towerImage2
+  };
+  // const tower1 = new Tower(50,50,towerImage1);
+  // const tower2 = new Tower(50,250,towerImage2);
+   const tower1 = new Tower(tower1Constructor);
+   const tower2 = new Tower(tower2Constructor);
 
   const towerMenu=new TowerMenu([tower1,tower2]);
   const game = new Game(grid,towerMenu,canvas,ctx);
