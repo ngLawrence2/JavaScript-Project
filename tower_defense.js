@@ -18,6 +18,10 @@ towerImage1.src= "./images/tower1.png";
 const towerImage2 = new Image();
 towerImage2.src= "./images/tower2.png";
 
+
+const towerImage3 = new Image();
+towerImage3.src = "./images/tower3.png";
+
 document.addEventListener("DOMContentLoaded", () => {
   const canvas = document.getElementById("game-canvas");
   const ctx = canvas.getContext("2d");
@@ -34,12 +38,21 @@ document.addEventListener("DOMContentLoaded", () => {
     y:250,
     img:towerImage2
   };
+
+  let tower3Constructor = {
+    x:50,
+    y:50,
+    img: towerImage3
+  }
+
   // const tower1 = new Tower(50,50,towerImage1);
   // const tower2 = new Tower(50,250,towerImage2);
    const tower1 = new Tower(tower1Constructor);
    const tower2 = new Tower(tower2Constructor);
+   const tower3 = new Tower(tower3Constructor);
 
-  const towerMenu=new TowerMenu([tower1,tower2]);
+
+  const towerMenu=new TowerMenu([tower3,tower2]);
   const game = new Game(grid,towerMenu,canvas,ctx);
 
 
