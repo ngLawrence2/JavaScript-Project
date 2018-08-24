@@ -1,88 +1,47 @@
 # Tower Defense
 
-## Background and Overview
-
-  Tower defense is a game where users will create towers to defend
-  their territory. The game will be made up in a grid. Users put towers
-  in a certain grid location and units will spawn on the right side of the
-  canvas.
-  Users will have to earn money to buy towers and put towers down in
-  strategic locations within the grid. When units have walked into the same
-  grid as a tower, the unit will attack the tower and the tower will lose health
-  over time. To lose the game, the unit will have reached the left of the canvas.
-  To win, the user must hold out until all units have been killed.
-
-  ## Functionality & MVP
-
-  In tower defense, users will be able to:
-- [ ] Create different towers depending on what they can afford
-- [ ] Hear sounds when units die, towers getting hit, and tower attacking
-units
-- [ ] Restart the game
-- [ ] Collect money to create towers
-- [ ] See how many units are left
-
-In addition, this project will include:
-- [ ] Instructions on the goal
-
-## Wireframes
-
-This app will consist of a single screen with a grid as the background and
-a list of towers on the side. Users will be able to select from the list of towers
-from the sidebar and place into a grid.
-There will also be nav links to my Github, LinkedIn, instructions, and a restart button.
+### [Live Demo](https://nglawrence2.github.io/JavaScript-Project/)
 
 
- ![wireframe](https://thumb.ibb.co/howBoK/tower_def.png)
+Tower Defense is a 2D game made with vanilla JavaScript and HTML canvas. The goal
+of the game is to prevent units from reaching the left of the canvas by buying towers.
 
- There will be better images and animation rather than the images shown, this will be the skeleton of how the game works.
+## Animation
+![Animation](https://media.giphy.com/media/myMbq2eMz5vE2lmJF5/giphy.gif)
 
+The animation of the squid has been created with multiple images found in a sprite. Each
+frame display one part of the sprite. One challenge of displaying the animation is that
+the sprite image has too few images. Cycling through all the images every frame will
+make the squid appear as if it is flickering. A solution to this was to set a timer and
+request a new frame after the timer. With this solution, it reduces the need to require
+more images to produce this animation.
 
+## Collision Detection
+![Collsion](https://media.giphy.com/media/B0X3pE1HKVgjBT40VM/giphy.gif)
 
- ## Architecture and Technologies
+The collision detection between the bullets and the squid has been created
+with the distance formula. I used the distance formula by calculating
+the x and y coordinate of the bullet and monster. From this result,
+I used a comparison to determine whether the distance is smaller than the
+width of the bullet.
 
- This project will be implemented with the following technologies:
-* Vanilla JavaScript for the overall structure and game logic.
-* HTML5 canvas for DOM manipulation and rendering.
-* Webpack to bundle scripts
+```
+calculateDistance(obj1, obj2) {
+  const xValues = Math.pow((obj2.x - obj1.x),2);
+  const yValues = Math.pow((obj2.y-obj1.y),2);
+  return Math.pow(xValues+yValues,0.5);
+}
 
-## Implementation Timeline
-
-Over the weekend
-- [ ] Create grid of the game with a background
-- [ ] Learn about animation and get sprites for animation
-
-Day 1 Start rendering enemy units and create towers
- ## Architecture and Technologies 
-
- This project will be implemented with the following technologies:
-* Vanilla JavaScript for the overall structure and game logic.
-* HTML5 canvas for DOM manipulation and rendering.
-* Webpack to bundle scripts
-
-## Implementation Timeline
-
-Over the weekend
-- [ ] Create grid of the game with a background
-- [ ] Learn about animation and get sprites for animation
-
-Day 1 Start rendering enemy units and create towers
-
-- [ ] Learn about animation and be able to render enemy units
-- [ ] Start on collision between tower attacks and enemy units
-
-Day 2 Learn how to include audio and be able to create towers
-
-- [ ] create audio and background music
-- [ ] Create sidebar menu for towers
-- [ ] create audio and background music
-- [ ] Create sidebar menu for towers
+if(this.calculateDistance(bullet,currentMonster) <30) {
+  currentMonster.health-=50;
+  currentMonster.attacked=true;
+}
+```
 
 
-Day 3 Create towers and set on location and have towers attack automatically
-- [ ] write logic for tower class with attacking every set interval
-- [ ] fix bugs and handle invalid moves
+### Future Ideas
+* Create more towers for the user on the sidebar
+* Create monsters that have different abilities
+* Levels
 
-Day 4 Testing and completing unfinished tasks
-- [ ] Test the game and see if there are any bugs
-- [ ] Create Restart for the game
+ 
