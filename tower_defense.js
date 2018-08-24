@@ -57,7 +57,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 
-  const gameview = new GameView(game,ctx);
+  const gameview = new GameView(game,ctx,canvas);
   gameview.start();
 
   //gets the position at the grid that was picked
