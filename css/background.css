@@ -2,5 +2,19 @@
   background-image: url("../images/background.jpg");
   background-repeat: no-repeat;
   background-size: 100% 85%;
+}
 
+.body {
+  display: flex;
+}
+
+.githubURL {
+  width:80px;
+  height: 80px;
+  margin-left: 50px;
+}
+
+.linkedInURL {
+  width:80px;
+  height: 80px;
 }
